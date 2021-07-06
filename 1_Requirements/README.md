@@ -23,18 +23,33 @@ Our system displays the welcome message when user enters the game, at the welcom
 #  4W&#39;s and 1&#39;H
 
 ## Who:
-**TBD**
+This game can be played by anyone irrespective of age.
 
 ## What:
-**TBD**
+The primary practical use of this quiz game is test the general knowledge skills of the player. 
 
 ## When:
-**TBD**
+Anytime whenever the player is free from all his/her professional work can play this game as to refresh the mind, relax adn go to back to work with an new energy.
 
 ## Where:
-**TBD**
+Anywhere from the player's laptop.
 
 ## How:
-**TBD**
+Quiz games can help player gain general knowledge by participating or playing these type of games. 
 
-## Test
+# Detail requirements
+
+## High Level Requirements:
+
+| ID | Description | Status |
+| --- | --- | --- |
+| HR01 | To be able to work for all types of cases.| |
+| HR02 | To be able to save all the answers answered correctly by the player. | |
+
+##  Low level Requirements:
+
+| ID | Description | Status |
+| --- | --- | --- |
+| LR01 | To have a effecient code. | |
+
+
