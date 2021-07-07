@@ -1,9 +1,18 @@
+/**
+ * This contains all the standard libraires required for the project
+ * 
+*/
 #include "fun.h"
 #include<stdio.h>
 #include<conio.h>
 #include<ctype.h>
 #include<stdlib.h>
 #include<string.h>
+
+/**
+ * This is the main function.
+ * 
+*/
 int main()
      {
      int countr,r,r1,count,i,n;
