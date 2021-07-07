@@ -1,4 +1,4 @@
-#include "fun.h"
+#include <fun.h>
 void show_record()  
     {system("cls");
 	char name[20];

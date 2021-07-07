@@ -1,4 +1,4 @@
-#include "fun.h"
+#include <fun.h>
 
 void help()
 	{system("cls");
