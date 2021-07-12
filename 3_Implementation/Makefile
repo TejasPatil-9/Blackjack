@@ -1,77 +1,46 @@
-# Name of the project
-PROJECT_NAME = Calculator
+ifdef OS
+   RM = del /q
+   FixPath = $(subst /,\,$1)
+   EXEC = exe
+else
+   ifeq ($(shell uname), Linux)
+      RM = rm -rf
+      FixPath = $1
+	  #EXEC = out
+   endif
+endif
 
-# Output directory
-BUILD = build
+PROJ_NAME = quizgame
+TEST_PROJ_NAME = $(PROJ_NAME)
 
-# All source code files
-SRC = project_main.c\
-src/calculator_operations.c
+BUILD_DIR = Build
 
-# All test source files
-TEST_SRC = src/calculator_operations.c\
-test/test_calculator_operations.c\
-unity/unity.c\
+SRC = main.c src/editscore.c src/resetscore.c src/help.c src/showrecord.c
+INC = inc/fun.h -Iunity
+#PROJECT_OUTPUT = ./a.exe
 
-TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
+#all: $(SRC) $(INC)
+#gcc $(SRC) -O $(PROJECT_OUTPUT)
 
-# All include folders with header files
-INC	= -Iinc\
--Iunity\
+#run:$(PROJ_NAME)
+#./$(PROJECT_OUTPUT)
 
-#Library Inlcudes
-#INCLUDE_LIBS = 
-INCLUDE_LIBS = -lcunit
+TEST_SRC = test/test_quiz_game.c unity/unity.c
 
-# Project Output name
-PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
+#INC = -Iunity
 
-# Document files
-DOCUMENTATION_OUTPUT = documentation/html
+all: $(SRC) $(BUILD_DIR)
+	gcc $(SRC) $(INC) -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
 
-# Default target built
-$(PROJECT_NAME):all
+run: all
+	$(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
 
-# Run the target even if the matching name exists
-.PHONY: run clean test doc all
+$(BUILD_DIR):
+	mkdir $(BUILD_DIR)
 
-all: $(SRC) $(BUILD)
-	gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT).out
+testing: $(TEST_SRC)
+	gcc $^ $(INC) -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
+	$(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
 
-# Call `make run` to run the application
-run:$(PROJECT_NAME)
-	./$(PROJECT_OUTPUT).out
-
-# Document the code using Doxygen
-doc:
-	make -C ./documentation
-
-# Build and run the unit tests
-test:$(BUILD)
-	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) $(INCLUDE_LIBS)
-	./$(TEST_OUTPUT)
-
-analyze: test memcheck staticcheck coverage sanitize_check
-
-staticcheck:
-	cppcheck --enable=all -iunity .
-
-memcheck:
-	valgrind ./$(TEST_OUTPUT)
-
-sanitize_check:
-	gcc -fsanitize=address -fno-omit-frame-pointer $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) $(INCLUDE_LIBS)
-	./$(TEST_OUTPUT)
-
-coverage:$(TEST_SRC)
-	gcc -fprofile-arcs -ftest-coverage $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) $(INCLUDE_LIBS)
-	./$(TEST_OUTPUT)
-	gcov -a calculator_operations.c
-
-# Remove all the built files, invoke by `make clean`
 clean:
-	rm -rf $(BUILD) $(DOCUMENTATION_OUTPUT) *.gcda *.gcno *.gcov
-
-# Create new build folder if not present
-$(BUILD):
-	mkdir build
+	$(RM) $(call FixPath,$(BUILD_DIR)/*) *.gcda *.gcno *.gcov

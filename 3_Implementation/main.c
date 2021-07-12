@@ -1,8 +1,14 @@
 /**
- * This contains all the standard libraires required for the project
+ * @file main.c
+ * @author Tejas Patil (tejasrajeshp@gmail.com)
+ * @brief 
+ * @version 0.1
+ * @date 2021-07-12
  * 
-*/
-#include "fun.h"
+ * @copyright Copyright (c) 2021
+ * 
+ */
+#include "../inc/fun.h"
 #include<stdio.h>
 #include<conio.h>
 #include<ctype.h>

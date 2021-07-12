@@ -1,4 +1,20 @@
-#include <fun.h>
+/**
+ * @file resetscore.c
+ * @author Tejas Patil (tejasrajeshp@gmail.com)
+ * @brief 
+ * @version 0.1
+ * @date 2021-07-12
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
+#include "../inc/fun.h"
+#include<stdio.h>
+#include<conio.h>
+#include<ctype.h>
+#include<stdlib.h>
+#include<string.h>
+
 void reset_score()
     {system("cls");
     float sc;
