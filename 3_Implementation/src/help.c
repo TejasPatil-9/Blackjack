@@ -30,5 +30,4 @@ void help()
     printf("\n    right option");
     printf("\n >> You will be asked questions continuously if you keep giving the right answers.");
     printf("\n >> No negative marking for wrong answers");
-
-	printf("\n\n\t*********************BEST OF LUCK*********************************");
+    }
