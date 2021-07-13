@@ -1,11 +1,7 @@
 # SDLC Activity Based Learning
-
-Visit [Pages for Report -optional](using github.io option)
-
-Build | Code Quality | Unity | [Git Inspector](using github.io option)
-------|----------|-------|--------------
-[] | ![Code Quality Score](https://www.code-inspector.com/project/24953/score/svg) ![Code Grade](https://www.code-inspector.com/project/24953/status/svg) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/2d4ec6f79bac4ae0adc36ae8e0a64591)](https://www.codacy.com/gh/TejasPatil-9/Blackjack/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=TejasPatil-9/Blackjack&amp;utm_campaign=Badge_Grade)| []
-
+| Build  | Code Quality |  Git Inspector | Unity  |Codacy & Code Inspector|
+|--------|--------------|---------------:|-------:|----------------------:|
+|[![C CI Build status](https://github.com/TejasPatil-9/Blackjack/actions/workflows/C-Build.yml/badge.svg)](https://github.com/TejasPatil-9/Blackjack/actions/workflows/C-Build.yml)|[![Cppcheck-Code Quality](https://github.com/TejasPatil-9/Blackjack/actions/workflows/cpp-check.yml/badge.svg)](https://github.com/TejasPatil-9/Blackjack/actions/workflows/cpp-check.yml)|[![Check-Git Inspector](https://github.com/TejasPatil-9/Blackjack/actions/workflows/Git_Inspect.yml/badge.svg)](https://github.com/TejasPatil-9/Blackjack/actions/workflows/Git_Inspect.yml)|[![Unit Testing - Unity](https://github.com/TejasPatil-9/Blackjack/actions/workflows/Unit_TEST.yml/badge.svg)](https://github.com/TejasPatil-9/Blackjack/actions/workflows/Unit_TEST.yml)|![CODE_IN](https://www.code-inspector.com/project/24953/score/svg) ![CODGRA](https://www.code-inspector.com/project/24953/status/svg) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/2d4ec6f79bac4ae0adc36ae8e0a64591)](https://www.codacy.com/gh/TejasPatil-9/Blackjack/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=TejasPatil-9/Blackjack&amp;utm_campaign=Badge_Grade)|
 
 ## Folder Structure
 Folder             | Description
