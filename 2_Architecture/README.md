@@ -2,12 +2,5 @@
 
 ## High Level Design 
 
---- TBD Structural and Behavioural Diagram
-![HighLevelStructuralDiagram](Link to Pic)
-![HighLevelBehaviouralDiagram](Link to Pic)
+![HLD](https://github.com/TejasPatil-9/Blackjack/blob/185b32ac0e43ee94e75f63b4867a17d78c15f647/2_Architecture/level%20diagram.PNG)
 
-## Low Level Design 
-
---- TBD Structural and Behavioural Diagram
-![FeaturesLevelStructuralDiagram](Link to Pic)
-![FeaturesBehaviouralDiagram](Link to Pic)
