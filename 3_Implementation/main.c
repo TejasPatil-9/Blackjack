@@ -59,7 +59,7 @@ int main()
 	getch();
 	goto mainhome;}
 	else if (choice=='Q')
-	{exit();}
+	{exit(0);}
     else if(choice=='S')
     {
      system("cls");
